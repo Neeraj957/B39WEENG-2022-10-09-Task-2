@@ -8,7 +8,7 @@ calButtons.forEach(getButtonValue);
 
 function getButtonValue(calButton) {
     calButton.addEventListener('click', (e) => {
-        console.log(lastKey);
+        // console.log(lastKey);
         var btnValue = e.target.innerText;
 
         if (operationKeys.includes(lastKey)) {
@@ -19,6 +19,7 @@ function getButtonValue(calButton) {
         }
         lastKey = btnValue;
         if (btnValue !== 'AC' || 'back-space') {
+            // console.log(inputBox);
             inputBox.append(btnValue);
         }
     });
